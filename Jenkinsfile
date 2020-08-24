@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ls -la' 
+                bat 'dir'
                 echo 'Testing..'
             }
         }
