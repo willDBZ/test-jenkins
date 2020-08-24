@@ -1,25 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                bat 'dir'
-                echo 'Testing..'
-            }
-        }
         stage('Deploy') {
             steps {
+                bat 'surge C:\Users\William\Documents\random_coding\test-jenkins\www\ something-cool-here.surge.sh'
                 echo 'Deploying....'
-            }
-        }
-        stage('End') {
-            steps {
-                echo 'Ending....'
             }
         }
     }
